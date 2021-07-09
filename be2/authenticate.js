@@ -38,9 +38,7 @@ exports.login = async (req, res)=>{
         'name' : user[0].username
       });
     }
-
   }
-
 }
 
 exports.register = async (req, res)=>{
@@ -58,7 +56,6 @@ exports.register = async (req, res)=>{
 }
 
 exports.validate = async (req, res)=>{
-  //const bearerHeader = req.headers['authorization'];
   var token = req.body.token;
   try{
     var validate = jwt.verify(token,config.PrivateKey);
