@@ -1,1 +1,1 @@
-test_bumi
+In Github, there are 2 folders which are ‘be2’ and ‘fe’. ‘be2’ folder is used as the backend of the website using Express.js, while the ‘fe’ folder is used as the frontend using Vue 3. If you would like to use it in local, please first set up both of them using the method described on each documentation.
