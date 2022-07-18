@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 require('dotenv').config();
 
@@ -76,5 +76,10 @@ app.post('/rename', authenticateToken, admin.rename);
 app.post('/create', authenticateToken, admin.create);
 
 app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`)
+  console.log(`App listening at Port:${port}`)
 })
+
+const server = app.listen(process.env.PORT || 5000, () => {
+  const port = server.address().port;
+  console.log(`Express is working on port ${port}`);
+});
