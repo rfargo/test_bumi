@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 
 const config = require('./config/custom-environment-variables.json');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
 
