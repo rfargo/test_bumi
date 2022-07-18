@@ -1,14 +1,13 @@
 var mysql = require('mysql')
 
 var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'test_bumi'
+  host: process.env.MYSQL_HOST,
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
+  database: process.env.MYSQL_DB
 })
 
 connection.connect()
-
 
 exports.move = async (req, res)=>{
   var photo_id = req.body.photo_id;  

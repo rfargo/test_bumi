@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+require('dotenv').config();
+
 const config = require('./config/custom-environment-variables.json');
 var bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
