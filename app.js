@@ -15,7 +15,7 @@ var auth = require('./authenticate');
 
 // Add a list of allowed origins.
 // If you have more origins you would like to add, you can add them to the array below.
-const allowedOrigins = ['http://localhost:8080'];
+const allowedOrigins = ['http://localhost:8080', '*'];
 
 const options = cors.CorsOptions = {
   origin : allowedOrigins,
